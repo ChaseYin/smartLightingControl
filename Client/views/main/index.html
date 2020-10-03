@@ -1,0 +1,310 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ChaseTest</title>
+<link href="public/css/main.css" rel="stylesheet" type="text/css">
+<link href="public/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="public/fontAwesome/css/all.css" rel="stylesheet" type="text/css">
+<script defer src="public/fontAwesome/js/all.js"></script> <!--load all styles -->
+<script src="public/js/jquery-1.12.4.min.js"></script>
+<script src="public/js/jquery.cookie.js"></script>
+<script src="public/js/index.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="https://github.com/ChaseYin/webapplication" target="blank"> <!-- uses brands style -->
+          <h2><i class="fab fa-github-square"></i>  ChaseWeb</h2></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor03">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><h3>Home </h3></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><h3>Features</h3></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><h3>Pricing</h3></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about" target="_blank"><h3>About</h3></a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><h3>Dropdown</h3></a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="javascript:void(0);">Action</a>
+                <a class="dropdown-item" href="javascript:void(0);">Another action</a>
+                <a class="dropdown-item" href="javascript:void(0);">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="javascript:void(0);">Separated link</a>
+              </div>
+            </li> -->
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+           
+            <?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+ &nbsp&nbsp<input class="form-control mr-sm-2" type="text" placeholder="Search"> <button type="button" class="btn btn-secondary">&nbspSearch&nbsp<i class="fas fa-grin"></i></button> </form> </div> </nav>
+   
+
+
+	<div class="img-container">
+<img src="https://i.loli.net/2020/10/03/aJmH4zW5PIKqOXM.jpg">
+<p class="desc">Hey, I'm Xiaofeng. Welcome to smart lighting control system!</p>
+</div>
+
+	<!-- <nav>
+		<div class="menu">
+            {% for category in categories %}
+            <a href="/{{category._id}}">{{category.name}}</a>
+            {% endfor %}
+	    </div>
+	</nav> -->
+
+	
+
+    <main class="clear">
+      {% if userInfo._id %}
+          <div class="jumbotron" id="userInfo">
+            
+              <p><span><h4><i class="fas fa-award"></i>{{userInfo.username}}</h4></span></p>
+              <p><span class="colDanger"><h5>Hello！Welcome to Xiaofeng's smart lighting control system!</h5></span></p>
+             
+              <a href="/album"><button type="button" class="btn btn-outline-success"><h4>Manage lighting!&nbsp;&nbsp;<i class="fas fa-grin"></i></h4></button></a><br/><br/><br/>
+
+              <a href="javascript:void(0);" id="logout"><h6>Log out</h6></a>
+              
+            </div>
+            {% else %}
+        <div class="mainLeft">
+
+
+          
+         
+            
+            <div class="jumbotron">
+              <h1><i class="far fa-laugh"></i>&nbsp&nbspSmart lighting control system</h1>
+            
+              <p class="colDefault">
+                Author：<span class="colInfo">Xiaofeng Yin</span> 
+                time：<span class="colInfo">03/10/2020 16:00</span> 
+
+            </p>
+                <dfn><p>This system is aimed to support smart control of building lighting</p></dfn>
+                <dfn><p>Its function includes remote control, customize lighting, unified manage bulbs of each area or floor.
+                  Besides, this system also supports overall view of each floor and area to help manager make correct deployment accoridng to current lighting condition.
+                </p></dfn>
+                <div class="line" align = "center" id="spinBox" style="display: none;"> <i class="fa fa-spinner fa-spin fa-3x fa-fw" aria-hidden="true"></i><h6>Logging...</h6></div>
+     
+            </div>
+            <div class="jumbotron">
+              <h1><i class="far fa-grin-alt"></i>&nbsp&nbspSIT314 Learning</h1>
+              
+                <p class="colDefault">
+                    Author：<span class="colInfo">Xiaofeng Yin</span> - 
+                    time：<span class="colInfo">03/10/2020 17:00</span> 
+                </p>
+                <dfn><p>During process of finishing SIT314, I have obtained more comprehensive and depper understanding of Internet of Things(IoT).
+                  This is a very adavanced field with many interesting functions. 
+                  I have learned the relvant knowledge of IoT scalability from many angles.
+                  Review whole trimester, tutor's good teaching and very warm as well as kind comments have encourge me to explore more in this field.
+                  I really appreciate my tutor Jonathan.
+                </p></dfn>
+                <div class="line" align = "center" id="spinBox" style="display: none;"> <i class="fa fa-spinner fa-spin fa-3x fa-fw" aria-hidden="true"></i><h6>Logging...</h6></div>
+                <div class="function"><a href="">Read</a></div>
+            </div>
+           
+         
+            
+            
+
+         
+        </div>
+        <script>
+          $(document).ready(function(){
+            var remember = $.cookie('remember');
+           
+            if(remember == 'true')
+            {
+              var email = $.cookie('email');
+              var password = $.cookie('password');
+              $('#vEmail').val(email);
+              $('#vPassword').val(password);
+              // $('#userInfoId').val(userInfo);
+              $('#remember').prop("checked",true);
+            }
+          })
+
+        </script>
+     
+        <div class="mainRight">
+            
+            {% if userInfo._id %}
+            <div class="jumbotron" id="userInfo">
+                <div class="title"><span><h4>UserInformation</h4></span></div>
+                <p><span><h4><i class="fas fa-award"></i>{{userInfo.username}}</h4></span></p>
+                {% if userInfo.isAdmin %}
+                <p>
+                    <span class="colDanger">Hello，admin！</span>
+                    <a href="/admin">Going to management</a>
+                </p>
+                {% else %}
+                <p><span class="colDanger"><h5>Hello！Welcome to Chase's smart lighting control System</h5></span></p>
+                {% endif %}
+                <!-- <div id = "exitBox" class="line"><span class="colDark"></span><button>Exit</button></div> -->
+                <a href="javascript:void(0);" id="logout"><h6>Log out</h6></a>
+                
+              </div>
+            
+            {% else %}
+            <div class="jumbotron" id="loginBox">
+                <div class="title"><span><h2>Log In Right Now!</h2></span></div>
+                <br></br>
+                <!-- <div class="line"><span class="colDark">Email：</span><input type="text" name="username" /><em></em></div> -->
+                <div class="form-group">
+                  <fieldset>
+                    <label class="control-label"><h5><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp&nbspEmail:</h5></label>
+                    <input class="form-control" type="text" placeholder="Email address..." name="username" id="vEmail">
+                  </fieldset>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1"><h5><i class="fa fa-key" aria-hidden="true"></i>&nbsp&nbspPassword: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="/forgot" class="text-info">Forget?</a></h5></label>
+                  <input type="password" class="form-control" id="vPassword" placeholder="Password" name="password">
+                </div>
+                <!-- <div class="line"><span class="colDark">PassWord：</span><input type="password" name="password" /><em></em></div> -->
+                <div class="form-group">
+                  <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="remember" checked="">
+                    <label class="custom-control-label" for="remember">Save password</label>
+                  </div>
+                  </div>
+                  <div align = "center" class="line" ><span class="colDark"></span><button type="button" class="btn btn-success" id="loginBtn"><h5>Log In</h5></button>
+                <!-- <div align = "center" class="line"><span class="colDark"></span><button class="btn btn-primary"><h5>Log In</h5></button> -->
+                <br></br>
+                <!-- <div class="line" align = "center"><h6>Log in with<a href="/google" class="google"><p class="text-info">Google!</p></a></h6></div> -->
+                <!-- <div class="line" align = "center" id="googleBtn"><p class="textRight"><h6>Log in with  <a href="/google" class="text-info">Google !</a></h6>　</p></div> -->
+                <div class="line" align = "center" id="registerBtn"><p class="textRight"><h6>Do not have an account?  <a href="javascript:;" class="colMint">Register now!</a></h6>　</p></div>
+                <div class="line" align = "center" id="spinBox1" style="display: none;"> <i class="fa fa-spinner fa-spin fa-3x fa-fw" aria-hidden="true"></i><h6>Confirming your information...</h6></div>
+                <div class="line" align = "center"><h6><p class="colWarning textCenter"></p></h6></div>
+                
+                
+              </div>
+              </div>
+              <script>
+                $("#loginBtn").click(function(){
+                  $("#spinBox1").show();
+                  // $("#loginBtn").hide();
+                   $("#googleBtn").hide("slow");
+                   $("#registerBtn").hide("3000");
+                
+                })
+              </script>
+             
+              <div class="jumbotron" id="registerBox" style="display: none;">
+                <div class="title"><span><h2>Register</h2></span></div>
+                <div class="form-group">
+                  <label for="exampleSelect1"><i class="fas fa-globe-americas"></i>&nbsp&nbspCountry:</label>
+                  <select class="form-control" id="exampleSelect1" name="country">
+                   
+                  </select>
+                </div>
+                <!-- <div class="line"><span class="colDark"><select class ="countryList" name="country"><option></option></select></span></div> -->
+                <div class="form-group">
+                  <fieldset>
+                    <label class="control-label" for="disabledInput"><i class="fa fa-user" aria-hidden="true"></i>&nbsp&nbspFirstName:</label>
+                    <input class="form-control" type="text" placeholder="Input your first name..." name="first_name">
+                  </fieldset>
+                </div>
+                <div class="form-group">
+                  <fieldset>
+                    <label class="control-label" for="disabledInput"><i class="fa fa-user" aria-hidden="true"></i>&nbsp&nbspLastName:</label>
+                    <input class="form-control" type="text" placeholder="Input your first name..." name="last_name">
+                  </fieldset>
+                </div>
+                
+                <!-- <div class="line"><span class="colDark">firstname：</span><input name="first_name" type="text" /></div>
+                <div class="line"><span class="colDark">lastname：</span><input name="last_name" type="text" /></div> -->
+                <div class="form-group">
+                  <label for="exampleInputEmail1"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp&nbsp*Log In Email address:</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="username">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1"><i class="fas fa-mail-bulk"></i>&nbsp&nbsp*Other Email address:</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1"><i class="fa fa-key" aria-hidden="true"></i>&nbsp&nbsp*Password:</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1"><i class="fa fa-lock" aria-hidden="true"></i>&nbsp&nbsp*Confirm Password:</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password" name="repassword">
+                </div>
+                <div class="form-group">
+                  <fieldset>
+                    <label class="control-label"><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp&nbspCity:</label>
+                    <input class="form-control" id="readOnlyInput" type="text" placeholder="City input here…" name="city">
+                  </fieldset>
+                </div>
+                <div class="form-group">
+                  <fieldset>
+                    <label class="control-label"><i class="fa fa-map-pin" aria-hidden="true"></i>&nbsp&nbspRegion:</label>
+                    <input class="form-control" type="text" placeholder="Region input here…" name="region">
+                  </fieldset>
+                </div>
+
+                <div class="form-group">
+                  <fieldset>
+                    <label class="control-label"><i class="fa fa-street-view" aria-hidden="true"></i>&nbsp&nbspAddress:</label>
+                    <input class="form-control" type="text" placeholder="Address input here…" name="address">
+                  </fieldset>
+                </div>
+                <div class="form-group">
+                  <fieldset>
+                    <label class="control-label"><i class="fa fa-book" aria-hidden="true"></i>&nbsp&nbspPostal_code:</label>
+                    <input class="form-control" type="text" placeholder="Postal code input here…" name="zip_postal_code">
+                  </fieldset>
+                </div>
+                <div class="form-group">
+                  <fieldset>
+                    <label class="control-label"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp&nbspTelephone:</label>
+                    <input class="form-control" type="text" placeholder="Telephone input here…" name="tel">
+                  </fieldset>
+                </div>
+
+
+                <div align = "center" class="line"><span class="colDark"></span><button type="button" class="btn btn-success"><h5>Register Now</h5></button></div>
+                <!-- <div align = "center" class="line"><span class="colDark"></span><button>Register Now</button></div> -->
+                <p class="textRight"><h6>Already have an account? <a href="javascript:;" class="colMint">Log in now!</a>　</h6></p>
+                <p class="colWarning textCenter"></p>
+              </div>
+            {% endif %}
+
+           
+           
+        
+
+
+    </main>
+    <?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+
+        
+ 
+    <!-- //用来旋转 -->
+    <!-- <h1><i class="fa fa-cog fa-spin fa-3x fa-fw" aria-hidden="true"></i></h1>
+    <i class="fa fa-spinner fa-spin fa-3x fa-fw" aria-hidden="true"></i>
+    <i class="fas fa-ambulance fa-spin fa-3x fa-fw" aria-hidden="true"></i>
+    <i class="fas fa-pizza-slice fa-spin fa-3x fa-fw" aria-hidden="true"></i>
+    <i class="fas fa-fan fa-spin fa-3x fa-fw" aria-hidden="true"></i> -->
+    <i class="far fa-sun"></i>
+</body>
+</html>

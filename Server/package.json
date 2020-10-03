@@ -1,0 +1,14 @@
+{
+  "name": "albumtest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Chase",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.10.6"
+  }
+}
